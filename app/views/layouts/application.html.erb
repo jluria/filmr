@@ -15,7 +15,7 @@
         <%= link_to "Home", root_path %>
         <%= link_to "Sign out", session_path, method: :delete %>
         <% if current_user.admin? %>
-        You're an Admin! 
+          You're an Admin! 
         <% end %>
       <% else %>
         Welcome Guest.
