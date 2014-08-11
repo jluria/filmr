@@ -8,13 +8,22 @@
 </head>
 <body>
 
-  <% if signed_in? %>
-    <%= link_to "Sign out", session_path, method: :delete %>
-  <% else %>
-    <%= link_to "Sign in", new_session_path %>
-    <%= link_to "Sign up", new_user_path %>
-  <% end %>
-
+  <header class="top-bar">
+    <h3>
+      <% if signed_in? %>
+        Welcome <%= current_user.email %>
+        <%= link_to "Home", root_path %>
+        <%= link_to "Sign out", session_path, method: :delete %>
+        <% if current_user.admin? %>
+          You're an Admin! 
+        <% end %>
+      <% else %>
+        Welcome Guest.
+        <%= link_to "Sign in", new_session_path %>
+        <%= link_to "Sign up", new_user_path %>
+      <% end %>
+    </h3>
+  </header>
   <%= yield %>
 
 </body>
