@@ -8,11 +8,6 @@ class TalentsController < ApplicationController
     @talent = Talent.new
   end
 
-  def show
-    @talent = Talent.find(params[:id])
-  end
-
-
   def create
     @talent = Talent.new(talent_params)
     @talent.save
