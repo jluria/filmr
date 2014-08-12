@@ -11,6 +11,11 @@ class MoviesController < ApplicationController
     redirect_to root_path
   end
 
+  def show
+    @movie = Movie.find(params[:id])
+  end
+
+
   private
 
   def movie_params
