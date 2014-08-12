@@ -1,0 +1,9 @@
+<h1>Cast Listing</h1>
+
+<div>
+  <ul>
+    <% @casts.each do |cast| %>
+      <li><%= link_to cast.title %></li>
+    <% end %>
+  </ul>
+</div>

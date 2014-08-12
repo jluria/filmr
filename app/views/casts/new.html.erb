@@ -1,11 +1,12 @@
-<h1>Add A Movie</h1>
+<h1>Add Cast Member</h1>
 
-  <%= form_for @movie do |form| %>
+  <%= form_for @cast do |form| %>
     <div>
       <%= form.label :title %>
       <%= form.text_field :title %>
     </div>
+
     <div>
-      <%= form.submit "Add_Movie" %>
+      <%= form.submit "Add Cast" %>
     </div>
   <% end %>
