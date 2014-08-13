@@ -16,7 +16,6 @@
           Welcome <%= current_user.email %>
           <% if current_user.admin? %>
             You're an Admin!
-            <%= link_to "Sign out", session_path, method: :delete %>
           <% end %>
         <% else %>
           <%= link_to "Sign In", new_session_path %>
