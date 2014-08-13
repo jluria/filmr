@@ -1,0 +1,12 @@
+<h1>Add A Movie</h1>
+
+<%= form_for [:admin, @movie] do |form| %>
+  <div>
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+  <div>
+    <%= form.submit "Add Movie" %>
+  </div>
+
+<% end %>
