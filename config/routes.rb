@@ -4,6 +4,10 @@ Rails.application.routes.draw do
 
   resource :session, only: [:new, :create, :destroy]
   resources :users, only: [:new, :create]
-  resources :movies, only: [:new, :create, :show, :index]
+  resources :movies, only: [:show, :index]
   resources :talents, only: [:new, :create, :show, :index]
+
+  namespace :admin do
+    resources :movies, only: [:new, :create]
+  end
 end
