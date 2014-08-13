@@ -1,7 +1,7 @@
 class TalentsController < ApplicationController
 
   def index
-    @talent = Talent.all
+    @talents = Talent.all
   end
 
   def show
