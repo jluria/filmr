@@ -1,3 +1,11 @@
-<h2>Talent List</h2>
-
-<%= @talent.name %>
+<h2><%= @talent.name %></h2>
+<h3>Crew Positions</h3>
+<% @talent.crew_memberships.each do |crew| %>
+  <%= crew.movie.title %> |
+  <%= crew.position %>
+<% end %>
+<h3>Cast Positions</h3>
+<% @talent.cast_memberships.each do |cast| %>
+  <%= cast.movie.title %> |
+  <%= cast.character_name %>
+<% end %>
