@@ -1,3 +1,5 @@
+<? http://teachmetocode.com/screencasts/building-a-star-rating-system-in-ruby-on-rails-with-jquery/ ?>
+
 <h1>Movie Listings</h1>
 
 <% if current_user.admin? %>
@@ -11,3 +13,21 @@
     <% end %>
   </ul>
 </div>
+
+<% @movies.each do |movie| %>
+	<tr>
+		<td><%= movie.title %></td>
+		<td>
+			<ul class="rating">
+				<% form_id = "movie#{movie.id}_rating" %>
+				<%= form_for movie.ratings.last || movie.ratings.build, :html => {:id => "movie_#{movie.id}_rating"} %>
+				<%= f.hidden_field :movie_id %>
+				<%= f.hidden_field :stars, :id => "#{form_id}_stars" %>
+				<% end %>
+				<% (0..10).each do |i| %>
+				<li class="rating_star" data-stars="<% i %>" data-form-id="<%=form_id%>"></li>
+				<% end %>
+			</ul>
+		</td>
+	</tr>
+<% end %>
