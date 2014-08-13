@@ -1,5 +1,4 @@
 class Admin::MoviesController < AdminController
-
   def new
     @movie = Movie.new
   end
