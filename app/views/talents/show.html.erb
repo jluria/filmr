@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <h2><%= @talent.name %></h2>
 <h3>Crew Positions</h3>
 <% @talent.crew_memberships.each do |crew| %>
@@ -10,18 +9,4 @@
   <%= cast.movie.title %> |
   <%= cast.character_name %>
 <% end %>
-=======
-<h3><%= @talent.name %></h3>
 
-<h2>Crew Positions</h2>
-<% @talent.crew_memberships.each do |cast| %>
-  <%= crew.movie.title %>
-  <%= crew.position %>
-<% end %>
-
-<% @talent.cast_memberships.each do |cast| %>
-  <%= cast.movie.title %>
-  <%= cast.character_name %>
-<% end %>
-
->>>>>>> talent functionality done while pairing with Josh
