@@ -1,12 +1,10 @@
 class Admin::TalentsController < AdminController
-  
   def new
-    @talent = Talent.new
+    talent = Talent.new
   end
 
   def create
-    @talent = Talent.new(talent_params)
-    @talent.save
+    talent = Talent.create(talent_params)
     redirect_to @talent
   end
 

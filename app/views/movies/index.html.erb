@@ -1,9 +1,7 @@
 <h1>Movie Listings</h1>
 
-<% if signed_in? %>
-  <% if current_user.admin? %>
-    <%= link_to "Add a movie", new_admin_movie_path %>
-  <% end %>
+<% if signed_in? && current_user.admin? %>
+  <%= link_to "Add a movie", new_admin_movie_path %>
 <% end %>
 
 <div>

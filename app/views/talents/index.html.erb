@@ -1,9 +1,7 @@
 <h1>Talent Listing</h1>
 
-<% if signed_in? %>
-  <% if current_user.admin? %>
-    <%= link_to "Create new talent", new_admin_talent_path %>
-  <% end %>
+<% if signed_in? && current_user.admin? %>
+  <%= link_to "Create new talent", new_admin_talent_path %>
 <% end %>
 
 <div>
