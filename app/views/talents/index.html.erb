@@ -1,9 +1,15 @@
 <h1>Talent Listing</h1>
 
+<% if signed_in? %>
+  <% if current_user.admin? %>
+    <%= link_to "Create new talent", new_admin_talent_path %>
+  <% end %>
+<% end %>
+
 <div>
   <ul>
-    <% @talent.each do |talent| %>
-      <li><%= link_to talent.name %></li>
+    <% @talents.each do |talent| %>
+      <li><%= link_to talent.name, talent %></li>
     <% end %>
   </ul>
 </div>

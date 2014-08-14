@@ -1,0 +1,13 @@
+<h1>Add Talent</h1>
+
+<%= form_for [:admin, @talent] do |form| %>
+  <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.submit "Add Talent" %>
+  </div>
+  
+<% end %>

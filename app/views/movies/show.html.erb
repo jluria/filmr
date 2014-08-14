@@ -1,1 +1,6 @@
 <%= render @movie %>
+
+<% @movie.cast_memberships.each do |cast| %>
+  <%= cast.character_name %>
+  <%= cast.talent.name %>
+<% end %>
