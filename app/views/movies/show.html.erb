@@ -1,5 +1,9 @@
 <%= render @movie %>
 
+<% if current_user.admin? %>
+  <%= link_to "Delete movie", [:admin, @movie], method: :delete %>
+<% end %>
+
 <h3>Cast</h3>
 <div>
   <% @movie.cast_memberships.each do |cast| %>

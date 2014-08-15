@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :talents, only: [:show, :index]
 
   namespace :admin do
-    resources :movies, only: [:new, :create]
+    resources :movies, only: [:new, :create, :destroy]
     resources :talents, only: [:new, :create, :destroy]
   end
 end
