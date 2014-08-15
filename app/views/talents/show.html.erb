@@ -1,4 +1,9 @@
 <h2><%= @talent.name %></h2>
+
+<% if current_user.admin? %>
+  <%= link_to "Delete talent", [:admin, @talent], method: :delete %>
+<% end %>
+
 <h3>Crew Positions</h3>
 <% @talent.crew_memberships.each do |crew| %>
   <%= crew.movie.title %> |
