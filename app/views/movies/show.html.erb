@@ -7,7 +7,7 @@
 <h3>Cast</h3>
 <div>
   <% @movie.cast_memberships.each do |cast| %>
-    <%= cast.talent.name %> |
+    <%= link_to cast.talent.name, cast.talent %> |
     <%= cast.character_name %>
   <% end %>
 </div>
@@ -15,7 +15,7 @@
 <h3>Crew</h3>
 <div>
   <% @movie.crew_memberships.each do |crew| %>
-    <%= crew.talent.name %> |
+    <%= link_to crew.talent.name, crew.talent %> |
     <%= crew.position %>
   <% end %>
 </div>
