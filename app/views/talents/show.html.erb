@@ -6,12 +6,12 @@
 
 <h3>Crew Positions</h3>
 <% @talent.crew_memberships.each do |crew| %>
-  <%= crew.movie.title %> |
+  <%= link_to crew.movie.title, crew.movie %> |
   <%= crew.position %>
 <% end %>
 <h3>Cast Positions</h3>
 <% @talent.cast_memberships.each do |cast| %>
-  <%= cast.movie.title %> |
+  <%= link_to cast.movie.title, cast.movie %> |
   <%= cast.character_name %>
 <% end %>
 
